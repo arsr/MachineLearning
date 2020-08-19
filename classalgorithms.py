@@ -230,7 +230,8 @@ class LogitReg(Classifier):
         self.weights = np.ones((Xtrain.shape[1], 1))
         #print ("ytrain shape is:" + str(ytrain.shape))
         Ytrain = ytrain.reshape((len(ytrain), 1))
-        for i in range(1000):
+        for i in yrange(1000):
+            print("hi")
             pred = LogitReg.predict_prob(feature_matrix, self.weights)
             error = Ytrain - pred
             Penalty = 0
